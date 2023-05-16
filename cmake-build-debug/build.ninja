@@ -61,12 +61,6 @@ build CMakeFiles/bandera.dir/bandera.c.o: C_COMPILER__bandera_Debug /home/alex/C
   OBJECT_DIR = CMakeFiles/bandera.dir
   OBJECT_FILE_DIR = CMakeFiles/bandera.dir
 
-build CMakeFiles/bandera.dir/xxxx.c.o: C_COMPILER__bandera_Debug /home/alex/CLionProjects/bandera/xxxx.c || cmake_object_order_depends_target_bandera
-  DEP_FILE = CMakeFiles/bandera.dir/xxxx.c.o.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu99
-  OBJECT_DIR = CMakeFiles/bandera.dir
-  OBJECT_FILE_DIR = CMakeFiles/bandera.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target bandera
@@ -75,7 +69,7 @@ build CMakeFiles/bandera.dir/xxxx.c.o: C_COMPILER__bandera_Debug /home/alex/CLio
 #############################################
 # Link the executable bandera
 
-build bandera: C_EXECUTABLE_LINKER__bandera_Debug CMakeFiles/bandera.dir/main.c.o CMakeFiles/bandera.dir/bandera.c.o CMakeFiles/bandera.dir/xxxx.c.o | /usr/lib/libOpenGL.so /usr/lib/libGLX.so /usr/lib/libGLU.so /usr/lib/libglut.so /usr/lib/libXmu.so /usr/lib/libXi.so
+build bandera: C_EXECUTABLE_LINKER__bandera_Debug CMakeFiles/bandera.dir/main.c.o CMakeFiles/bandera.dir/bandera.c.o | /usr/lib/libOpenGL.so /usr/lib/libGLX.so /usr/lib/libGLU.so /usr/lib/libglut.so /usr/lib/libXmu.so /usr/lib/libXi.so
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/libOpenGL.so  /usr/lib/libGLX.so  /usr/lib/libGLU.so  /usr/lib/libglut.so  /usr/lib/libXmu.so  /usr/lib/libXi.so  -lm
   OBJECT_DIR = CMakeFiles/bandera.dir

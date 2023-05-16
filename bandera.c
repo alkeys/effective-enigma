@@ -36,6 +36,19 @@ void letraN(int, int, int, float R, float G, float B);
 
 void tilde(int, int, int, float R, float G, float B);
 
+void letraL(int, int, int, float R, float G, float B);
+
+void letraB(int, int, int, float R, float G, float B);
+
+void letraE(int, int, int, float R, float G, float B);
+
+void letraR(int, int, int, float R, float G, float B);
+
+void letraT(int, int, int, float R, float G, float B);
+
+void letraA(int, int, int, float R, float G, float B);
+
+
 void inicializar_escudo() {
     glutCreateWindow("AM18007");
     glMatrixMode(GL_PROJECTION);
@@ -47,14 +60,26 @@ void dibujar_bandera() {
     glClearColor(1, 0.76, 0.4, 1);
     franjas();
     /*letraD(100,100);*/
-    letraD(37, 290, 4, 1, 1, 0.63, 0);
+    letraD(45, 290, 4, 1, 1, 0.63, 0);
     letraI(80, 290, 2, 1, 0.63, 0);
+    letraS(150, 310, 10, 1, 0.63, 0);
     letraO(122, 303, 18, 1, 0.63, 0);
-    letraS(160, 310, 10, 1, 0.63, 0);
+
+
     letraU(200, 295, 3, 1, 0.63, 0);
     letraN(230, 295, 4, 1, 0.63, 0);
     letraI(260, 290, 2, 1, 0.63, 0);
     letraO(300, 303, 18, 1, 0.63, 0);
+    letraN(325, 295, 4, 1, 0.63, 0);
+
+    letraL(370, 290, 4, 1, 0.63, 0);
+    letraI(390, 290, 2, 1, 0.63, 0);
+    letraB(420, 290, 4, 1, 0.63, 0);
+    letraE(445, 290, 4, 1, 0.63, 0);
+    letraR(465, 290, 4, 1, 0.63, 0);
+    letraT(495, 290, 4, 1, 0.63, 0);
+    letraA(510, 290, 4, 1, 0.63, 0);
+    letraD(535, 290, 4, 1.1, 1, 0.63, 0);
     glFlush();
 }
 
@@ -137,6 +162,60 @@ void letraN(int x, int y, int puntosize, float R, float G, float B) {
     dda(x + 15, y + 20, x + 25, y + 20, puntosize, R, G, B);
     ////parte de abajo
     dda(x - 5, y - 5, x + 5, y - 5, puntosize, R, G, B);
+}
+
+void letraL(int x, int y, int puntosize, float R, float G, float B) {
+    dda(x, y, x, y + 25, puntosize, R, G, B);
+    dda(x - 4, y + 25, x + 4, y + 25, puntosize, R, G, B);
+    dda(x - 4, y, x + 15, y, puntosize, R, G, B);
+    dda(x + 15, y, x + 15, y + 5, puntosize, R, G, B);
+
+}
+
+void letraB(int x, int y, int puntosize, float R, float G, float B) {
+    dda(x, y, x, y + 27, puntosize, R, G, B);
+    letraD(x, y + 13, puntosize, 0.5, R, G, B);
+    letraD(x, y, puntosize, 0.5, R, G, B);
+    dda(x - 5, y + 26, x, y + 26, puntosize, R, G, B);
+    dda(x - 5, y, x, y, puntosize, R, G, B);
+}
+
+void letraE(int x, int y, int puntosize, float R, float G, float B) {
+    dda(x, y, x, y + 27, puntosize, R, G, B);
+    dda(x - 3, y, x + 10, y, puntosize, R, G, B);
+    dda(x + 10, y, x + 10, y + 3, puntosize, R, G, B);
+    dda(x, y + 13, x + 8, y + 13, puntosize, R, G, B);
+    dda(x + 8, y + 12, x + 8, y + 16, puntosize, R, G, B);
+    //arriba
+    dda(x - 3, y + 27, x + 10, y + 27, puntosize, R, G, B);
+    dda(x + 10, y + 25, x + 10, y + 29, puntosize, R, G, B);
+}
+
+void letraR(int x, int y, int puntosize, float R, float G, float B) {
+    dda(x, y, x, y + 25, puntosize, R, G, B);
+    letraD(x, y + 11, puntosize, 0.6, R, G, B);
+    dda(x - 3, y + 26, x, y + 27, puntosize, R, G, B);
+    dda(x + 7, y + 11, x + 18, y, puntosize, R, G, B);
+    dda(x - 2, y, x + 2, y, puntosize, R, G, B);
+}
+
+void letraT(int x, int y, int puntosize, float R, float G, float B) {
+    dda(x, y, x, y + 27, puntosize, R, G, B);
+    dda(x - 10, y + 27, x + 10, y + 27, puntosize, R, G, B);
+    dda(x - 10, y + 24, x - 10, y + 30, puntosize, R, G, B);
+    dda(x + 10, y + 24, x + 10, y + 30, puntosize, R, G, B);
+    dda(x - 5, y, x + 5, y, puntosize, R, G, B);
+}
+
+void letraA(int x, int y, int puntosize, float R, float G, float B){
+    dda(x, y, x+5, y + 30, puntosize, R, G, B);
+    dda(x-2, y, x+3, y, puntosize, R, G, B);
+    dda(x+5, y+30, x+15, y, puntosize, R, G, B);
+    dda(x+5, y+30, x+16, y, puntosize, R, G, B);
+    dda(x+5, y+30, x+17, y, puntosize, R, G, B);
+    dda(x+14, y, x+20, y, puntosize, R, G, B);
+    dda(x+2, y+10, x+10, y+10, puntosize, R, G, B);
+
 }
 
 
